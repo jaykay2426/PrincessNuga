@@ -509,6 +509,19 @@ span{
     #menu-icon{
         display: block;
     }
+    .header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 20px;
+        padding: 4rem 5%;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+    }
     .navbar{
         position: absolute;
         top: 100%;
