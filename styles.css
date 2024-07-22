@@ -770,6 +770,13 @@ span{
     .rating i {
         font-size: 1.5rem;
     }
+    .timeline-content h3{
+    font-size: 30px;
+    }
+
+.timeline-content p{
+    font-size: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -798,5 +805,12 @@ span{
 
     .rating i {
         font-size: 1.2rem;
+    }
+    .timeline-content h3{
+    font-size: 20px;
+    }
+
+.timeline-content p{
+    font-size: 10px;
     }
 }
