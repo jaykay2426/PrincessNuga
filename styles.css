@@ -691,6 +691,9 @@ span{
         justify-content: space-between;
         z-index: 100;
     }
+    .heading{
+        font-size: 5rem;
+    }
     .navbar{
         position: absolute;
         top: 100%;
@@ -773,6 +776,10 @@ span{
     .wrapper {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .heading{
+        font-size: 5rem;
     }
 
     .testimonial-item {
