@@ -745,5 +745,13 @@ span{
     .contact form{
         flex-direction: column;
     }
+      .testimonial-item h2{
+        font-size: 2rem;
+    }
+    
+    .testimonial-item p{
+        font-size: 1.5rem;
+    }
+    
     
 }
