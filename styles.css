@@ -745,21 +745,51 @@ span{
     .contact form{
         flex-direction: column;
     }
-      .testimonial-item h2{
+      .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .testimonial-item {
+        min-height: 500px;
+        max-width: 400px;
+        padding: 20px 40px;
+    }
+
+    .testimonial-item h2 {
         font-size: 2.5rem;
     }
-    
-    .testimonial-item p{
+
+    .testimonial-item p {
         font-size: 1.5rem;
     }
-    .timeline-content h3{
-    font-size: 20px;
+
+    .rating i {
+        font-size: 1.5rem;
+    }
 }
 
-.timeline-content p{
-    color: black;
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 
-}
-    
-    
+    .testimonial-item {
+        min-height: 450px;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .testimonial-item h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-item p {
+        font-size: 1.2rem;
+    }
+
+    .rating i {
+        font-size: 1.2rem;
+    }
 }
