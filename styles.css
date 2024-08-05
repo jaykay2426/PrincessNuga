@@ -422,17 +422,17 @@ span{
     cursor: pointer;
 }
 .skills-bar .progress-line.html span {
-    width: 80%;
+    width: 70%;
     background-color: blue;
 }
 
 .skills-bar .progress-line.css span {
-    width: 85%;
+    width: 80%;
     background-color: orangered;
 }
 
 .skills-bar .progress-line.javascript span {
-    width: 60%;
+    width: 95%;
     background-color: yellow;
 }
 
