@@ -13,10 +13,10 @@ html{
     overflow-x: hidden;
 }
 :root{
-    --bg-color: black ;
+    --bg-color: #001f3f;
     --second-bg-color: white;
     --text-color: white;
-    --main-color: rgb(236, 185, 224);
+    --main-color: rgb(0, 174, 255);
 }
 body{
     background: var(--bg-color);
@@ -51,7 +51,7 @@ body{
     transform: scale(1.1);
 }
 span{
-    color: rgb(236, 185, 224);
+    color:rgb(0, 174, 255);
 }
 .navbar a{
     font-size: 1.8rem;
@@ -63,8 +63,8 @@ span{
     transition: 0.3s ease;
 }
 .navbar a:hover{
-    border-bottom: 3px solid rgb(236, 185, 224);
-    color: rgb(236, 185, 224);
+    border-bottom: 3px solid rgb(0, 174, 255);
+    color:rgb(0, 174, 255);
 }
 .section{
     height: 100vh;
@@ -108,7 +108,7 @@ span{
 }
 .home .typing-text span::before{
     content: 'Software Developer';
-    color: rgb(236, 185, 224);
+    color:rgb(0, 174, 255);
     animation: words 20s infinite;
 }
 .home .typing-text span::after{
@@ -128,19 +128,19 @@ span{
 }
 @keyframes words{
     0%, 20%{
-        content: 'ENTREPRENEUR';
+        content: 'WEB DEVELOPER';
     }
     21%, 40%{
-        content: 'FASHION MODEL';
+        content: 'WEB DESIGNER';
     }
     41%, 60%{
-        content: 'MAKEUP ARTIST';
+        content: 'Tech Enthusiast';
     }
     61%, 80%{
-        content: 'CONTENT CREATOR';
+        content: 'FASHION DESIGNER';
     }
     81%, 100%{
-        content: 'FASHION ENTHUSIAST';
+        content: 'MUSIC PRODUCER';
     }
 }
 @keyframes typing{
@@ -161,43 +161,43 @@ span{
 .home-img img{
     width: 25vw;
     border-radius: 100%;
-    box-shadow: 0 0 25px rgb(236, 185, 224);
+    box-shadow: 0 0 25px rgb(0, 174, 255);
     transition: 0.4s ease-in-out;
 }
 .home-img img:hover{
-    box-shadow: 0 0 25px rgb(236, 185, 224),
-                0 0 50px rgb(236, 185, 224),
-                0 0 100px rgb(236, 185, 224);
+    box-shadow: 0 0 25pxrgb(0, 174, 255),
+                0 0 50px rgb(0, 174, 255),
+                0 0 100pxrgb(0, 174, 255);
 }
 .social-icons a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 1rem;
     background: transparent;
-    border: 2px solid rgb(236, 185, 224);
+    border: 2px solid white;
     border-radius: 50%;
-    color: rgb(236, 185, 224);
+    color:rgb(0, 174, 255);
     margin: 3rem 0.5rem;
 }
 .social-icons a:hover{
     color: var(--text-color);
-    background-color: rgb(236, 185, 224);
+    background-color: rgb(0, 174, 255);
     transform: scale(1.2)translateY(-5px);
-    box-shadow: 0 0 25px rgb(236, 185, 224);
+    box-shadow: 0 0 25px rgb(0, 174, 255);
 }
 .btn-group{
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 .btn{
     display: inline-block;
     padding: 1re 3rem;
-    background: rgb(236, 185, 224);
-    box-shadow: 0 0 25px rgb(236, 185, 224);
+    background: rgb(0, 174, 255);
+    box-shadow: 0 0 25px rgb(0, 174, 255);
     border-radius: 3rem;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     color: black;
     border: 2px solid transparent;
     font-weight: 600;
@@ -205,19 +205,23 @@ span{
 }
 .btn:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgb(236, 185, 224),
-                0 0 50px rgb(236, 185, 224),
-                0 0 100px rgb(236, 185, 224),
+    box-shadow: 0 0 25px rgb(0, 174, 255)),
+                0 0 50px rgb(0, 174, 255),
+                0 0 100px rgb(0, 174, 255),
 }
 .btn-group a:nth-of-type(2){
     background-color: black;
-    color: rgb(236, 185, 224);
-    border: 2px solid c
+    color:rgb(0, 174, 255);
+    border: 2px solid white;
+    font-size: 2rem;
+    border-radius: 20px;
+    width: 80px;
+    text-align: center;
     box-shadow:  0 0 25px transparent;
 }
 .btn-group a:nth-of-type(2):hover{
-    box-shadow: 0 0 25px rgb(236, 185, 224);
-    background-color: rgb(236, 185, 224);
+    box-shadow: 0 0 25pxrgb(0, 174, 255);
+    background-color: rgb(0, 174, 255);
     color: black;
 }
 
@@ -225,29 +229,34 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    align-content: center;
     gap: 10rem;
+    text-align: center;
     background-color: var(--bg-color);
     height: 950px;
 }
 .about-img img{
     width: 20vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgb(125, 241, 125);
+    box-shadow: 0 0 25px  rgb(0, 174, 255);
     transition: 0.4s ease-in-out;
     margin-top: 30px;
     margin-left: 90px;
 }
 .about-img img:hover{
-    box-shadow: 0 0 25px rgb(125, 231, 121),
-                0 0 50px rgb(125, 231, 121),
-                0 0 100px rgb(125, 231, 121);
+    box-shadow: 0 0 25px rgb(0, 174, 255),
+                0 0 50px rgb(0, 174, 255),
+                0 0 100px  rgb(0, 174, 255);
 }
 .about-content h2{
     font-size: 5rem;
+    text-align: center;
+    align-content: center;
     text-align: left;
 }
 .about-content p{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 20px;
     
 }
@@ -260,14 +269,15 @@ span{
 }
 
 .about-content span{
-    color: rgb(125, 231, 121);
+    color: rgb(0, 174, 255);
+    
 }
 
 .about-content button{
     display: inline-block;
     padding: 1re 3rem;
-    background: rgb(125, 231, 121);
-    box-shadow: 0 0 25px rgb(125, 231, 121);
+    background:  rgb(0, 174, 255);
+    box-shadow: 0 0 25px  rgb(0, 174, 255);
     border-radius: 3rem;
     font-size: 1.8rem;
     color: black;
@@ -277,9 +287,9 @@ span{
 }
 .about-content button :hover{
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgb(125, 231, 121),
-                0 0 50px rgb(125, 231, 121),
-                0 0 100px rgb(125, 231, 121);
+    box-shadow: 0 0 25px rgb(0, 174, 255),
+                0 0 50px rgb(0, 174, 255),
+                0 0 100px rgb(0, 174, 255);
 }
 .about-content button a:nth-of-type(2){
     background-color: black;
@@ -288,8 +298,8 @@ span{
     box-shadow:  0 0 25px transparent;
 }
 .about-content button a:nth-of-type(2):hover{
-    box-shadow: 0 0 25px rgb(125, 231, 121);
-    background-color: rgb(125, 231, 121);
+    box-shadow: 0 0 25px  rgb(0, 174, 255);
+    background-color: rgb(0, 174, 255)
     color: black;
 }
 
@@ -297,11 +307,11 @@ span{
     width: 20px;
 }
 ::-webkit-scrollbar-thumb{
-    background: linear-gradient(to top, rgb(235, 222, 232), rgba(236, 185, 224, 0.555), black, violet, indigo);
+    background: linear-gradient(to top,  black, #001f3f, #001f3f, rgb(0, 174, 255), #001f3f, #001f3f, black);
     
 }
 ::-webkit-scrollbar-track{
-    background-color: rgb(236, 185, 224);
+    background-color:  rgb(0, 174, 255);
 }
 
 .heading{
@@ -333,13 +343,14 @@ span{
     height: 600px;
     border-radius: 600px;
     cursor: pointer;
-    border: 9px solid rgb(236, 185, 224);
+    border: 9px solid  rgb(0, 174, 255);
     transition: 0.4s ease-in-out;
 }
 .service-box:hover{
-    background-color: white;
-    color: rgb(236, 185, 224);
-    border: 9px solid rgb(236, 185, 224);
+    background-color:  #001f3f;
+    color:  rgb(0, 174, 255);
+    border: 9px solid rgb(0, 174, 255);
+    text-align: center;
     transform: scale(1.03);
 }
 .service-info{
@@ -352,15 +363,15 @@ span{
 }
 .service-info i{
     font-size: 8rem;
-    box-shadow: 0 0 25px rgb(236, 185, 224),
-                0 0 50px rgb(236, 185, 224),
-                0 0 100px rgb(236, 185, 224);
+    box-shadow: 0 0 25px  rgb(0, 174, 255),
+                0 0 50px  rgb(0, 174, 255),
+                0 0 100px  rgb(0, 174, 255);
 }
 .service-info i:hover{
-    color: pink;
+    color:  rgb(0, 174, 255);
     box-shadow: 0 0 25px black,
-    0 0 50px rgb(236, 185, 224),
-                0 0 100px rgb(236, 185, 224);
+    0 0 50px  rgb(0, 174, 255)),
+                0 0 100px  rgb(0, 174, 255);
 }
 .service-info h4{
     font-size: 4rem;
@@ -368,7 +379,7 @@ span{
     font-weight: 800;
 }
 .service-info p{
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.7;
 }
@@ -475,7 +486,7 @@ span{
     position: absolute;
     width: 5px;
     height: 100%;
-    background-color: rgb(236, 185, 224);
+    background-color: rgb(0, 174, 255);
     left: calc(50% - 1px);
 }
 
@@ -501,10 +512,10 @@ span{
 .timeline-dot{
     height: 21px;
     width: 21px;
-    background-color: rgb(236, 185, 224);
-    box-shadow: 0 0 25px rgba(236, 185, 224, 0.233),
-                0 0 25px rgba(236, 185, 224, 0.281),
-                0 0 25px rgba(236, 185, 224, 0.226);
+    background-color:  rgb(0, 174, 255);
+    box-shadow: 0 0 25px  #001f3f,
+                0 0 25px  #001f3f,
+                0 0 25px  #001f3f;
     position: absolute;
     left: calc(50% - 8px);
     border-radius: 50%;
@@ -514,36 +525,36 @@ span{
 .timeline-date{
     font-size: 30px;
     font-weight: 800;
-    color: pink;
+    color:  white;
     margin: 6px 0 15px;
 }
 
 .timeline-content{
-    background-color: white;
-    border: 3px solid rgb(236, 185, 224);
+    background-color:  rgb(0, 174, 255);
+    border: 3px solid  rgb(0, 174, 255);
     padding: 30px 50px;
     border-radius: 4rem;
-    box-shadow: 0 0 10px rgb(236, 185, 224);
+    box-shadow: 0 0 10px  rgb(0, 174, 255);
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
 
 .timeline-content:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgb(236, 185, 224),
-                0 0 25px rgb(236, 185, 224),
-                0 0 25px rgb(236, 185, 224);
+    box-shadow: 0 0 25px  white,
+                0 0 25px  white,
+                0 0 25px  white;
 }
 
 .timeline-content h3{
     font-size: 30px;
-    color: rgb(255, 0, 43);
+    color:  black;
     margin:  0 0 10px;
     font-weight: 500;
 }
 
 .timeline-content p{
-    color: black;
+    color: white;
     font-size: 20px;
     font-weight: 300;
     line-height: 22px;
@@ -580,8 +591,8 @@ span{
 .testimonial-item{
     min-height: 550px;
     max-width: 450px;
-    background: rgb(236, 185, 224);
-    border: 3px solid white;
+    background:  rgb(0, 174, 255);
+    border: 3px solid gold;
     border-radius: 2rem;
     padding: 30px 60px;
     cursor: pointer;
@@ -598,7 +609,7 @@ span{
 .testimonial-item:hover{
     border: 3px solid black;
     transform: translateY(-10px)scale(1.03);
-    box-shadow: 0 0 50px white;
+    box-shadow: 0 0 50px black;
 }
 
 .testimonial-item h2{
@@ -660,8 +671,8 @@ span{
     margin: 20px;
 }
 .footer ul li a{
-    color: red;
-    border-bottom: 3px solid green;
+    color: white;
+    border-bottom: 3px solid  rgb(0, 174, 255);
     transition: 0.3 ease-in-out;
 }
 .footer ul li a:hover{
