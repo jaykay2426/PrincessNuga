@@ -40,34 +40,67 @@ body{
     font-weight: 800;
     cursor: pointer;
 }
-.logo{
+
+.header i:hover{
+    color: white;
+}
+
+.logo {
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
-.logo:hover{
-    transform: scale(1.1);
+
+.logo:hover {
+    transform: scale(1.1) rotate(10deg);
 }
+
+
 span{
     color:rgb(0, 174, 255);
 }
-.navbar a{
+.navbar a {
     font-size: 1.8rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
+    border-radius: 30px;
     margin-left: 4rem;
     font-weight: 500;
+    padding: 10px 20px; /* Added padding to make sure the background covers the whole link */
     border-bottom: 3px solid transparent;
-    transition: 0.3s ease;
+    transition: all 0.4s ease; /* Smooth transition for all properties */
+    position: relative; /* Allows better control over pseudo-elements */
+    display: inline-block;
+    z-index: 1; /* Ensures the text appears above the background */
 }
-.navbar a:hover{
-    border-bottom: 3px solid rgb(0, 174, 255);
-    color: rgb(0, 174, 255);
-    background-color: white;
 
+.navbar a::before {
+    content: ''; /* Creates a pseudo-element for the background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white; /* The white background on hover */
+    z-index: -1; /* Keeps the background behind the text */
+    transition: width 1s ease, background-color 0.4s ease; /* Smooth background transition */
+    width: 0%; /* Initially the background is not visible */
+    border-radius: 30px;
 }
+
+.navbar a:hover::before {
+    width: 100%; /* Expands the background to cover the full width of the link */
+}
+
+.navbar a:hover {
+    color: rgb(0, 174, 255); /* Text color on hover */
+    border-bottom: 3px solid rgb(0, 174, 255); /* Bottom border color change */
+    background-color: transparent; /* We use the pseudo-element for the background, so the actual background is transparent */
+}
+
+
 .section{
     height: 100vh;
     padding: 10rem 12%;
@@ -171,7 +204,7 @@ span{
                 0 0 50px rgb(0, 174, 255),
                 0 0 100pxrgb(0, 174, 255);
 }
-.social-icons a{
+.social-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -180,15 +213,18 @@ span{
     background: transparent;
     border: 2px solid white;
     border-radius: 50%;
-    color:rgb(0, 174, 255);
+    color: rgb(0, 174, 255);
     margin: 3rem 0.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: var(--text-color);
     background-color: rgb(0, 174, 255);
-    transform: scale(1.2)translateY(-5px);
+    transform: scale(1.2) translateY(-5px);
     box-shadow: 0 0 25px rgb(0, 174, 255);
 }
+
 .btn-group{
     display: flex;
     gap: 2rem;
@@ -385,6 +421,8 @@ span{
     font-weight: 600;
     line-height: 1.7;
 }
+
+
 .skills{
     background-color: var(--bg-color);
     height: 950px;
@@ -427,36 +465,136 @@ span{
     position: relative;
     border-radius: 10px;
 }
+/* Keyframes for progress bar animation */
+@keyframes fillProgress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--progress-width);
+    }
+}
+
+/* Apply the animation to the progress bar spans */
 .skills-bar .bar .progress-line span {
     height: 100%;
     position: absolute;
     border-radius: 10px;
     background: blue;
     cursor: pointer;
+    width: 0; /* Start width at 0 */
+    transition: width 3s ease; /* Smooth transition */
 }
+
 .skills-bar .progress-line.html span {
-    width: 70%;
+    --progress-width: 70%;
     background-color: blue;
 }
 
 .skills-bar .progress-line.css span {
-    width: 80%;
+    --progress-width: 80%;
     background-color: orangered;
 }
 
 .skills-bar .progress-line.javascript span {
-    width: 95%;
+    --progress-width: 95%;
     background-color: yellow;
 }
 
 .skills-bar .progress-line.react span {
-    width: 65%;
-    background-color: #61dbfb; 
+    --progress-width: 65%;
+    background-color: #61dbfb;
 }
 
 .skills-bar .progress-line.mysql span {
-    width: 80%;
+    --progress-width: 80%;
     background-color: fuchsia;
+}
+.projects {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #111;
+    color: whitesmoke;
+}
+
+.projects h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards 0.5s; /* Delayed animation */
+}
+
+.project {
+    background-color: #61dbfb;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position for animation */
+    animation: fadeInUp 1.2s ease forwards; /* Fades in and moves up */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s, filter 0.3s; /* Adds smooth transitions */
+    border-radius: 8px 8px 0 0;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+.project:hover img {
+    transform: scale(1.08); /* Slight zoom on hover */
+    filter: brightness(1.2); /* Brightens the image on hover */
+}
+
+.project p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: whitesmoke;
+    opacity: 0;
+    animation: fadeInUp 1.4s ease forwards 0.2s; /* Delayed text animation */
+}
+
+.project a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* Keyframes for fade-in and move-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Starts slightly lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends in the original position */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 
@@ -654,6 +792,13 @@ span{
     border: 2px solid green;
     margin: 1.5rem 0;
     resize: none;
+}
+
+.contact .btn{
+    background-color: var(--bg-color);
+    width: 50%;
+    height: 40px;
+    color:  rgb(0, 174, 255);
 }
 
 .footer{
