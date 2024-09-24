@@ -56,3 +56,52 @@ function toggleReadMore() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Select the skills section
+const skillsSection = document.querySelector('.skills-bar');
+const progressSpans = document.querySelectorAll('.progress-line span');
+
+// Function to add animation when section is in view (progress bar fills up)
+const animateSkills = () => {
+    progressSpans.forEach(span => {
+        const progressWidth = getComputedStyle(span).getPropertyValue('--progress-width');
+        span.style.width = progressWidth;
+    });
+};
+
+// Function to reset progress bar to 0% (progress bar empties)
+const resetSkills = () => {
+    progressSpans.forEach(span => {
+        span.style.width = '0%'; // Reset width to 0%
+    });
+};
+
+// Create an Intersection Observer for both in-view and out-of-view animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateSkills();  // Fill progress bars when section enters the view
+        } else {
+            resetSkills();  // Reset progress bars when section leaves the view
+        }
+    });
+}, { threshold: 0.5 }); // Triggers when 50% of the section is visible
+
+// Start observing the skills section
+observer.observe(skillsSection);
