@@ -487,7 +487,7 @@ span{
 }
 
 .skills-bar .progress-line.html span {
-    --progress-width: 70%;
+    --progress-width: 90%;
     background-color: blue;
 }
 
@@ -497,17 +497,17 @@ span{
 }
 
 .skills-bar .progress-line.javascript span {
-    --progress-width: 95%;
+    --progress-width: 55%;
     background-color: yellow;
 }
 
 .skills-bar .progress-line.react span {
-    --progress-width: 65%;
+    --progress-width: 35%;
     background-color: #61dbfb;
 }
 
 .skills-bar .progress-line.mysql span {
-    --progress-width: 80%;
+    --progress-width: 20%;
     background-color: fuchsia;
 }
 .projects {
