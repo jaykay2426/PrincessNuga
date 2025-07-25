@@ -22,6 +22,38 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
 }
+/* In CSS */
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 255, 136, 0.2);
+  border: 2px solid rgb(0, 174, 255);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease, background 0.3s ease;
+  box-shadow: 0 0 10px white, 0 0 20px white;
+  animation: pulse 1.5s infinite ease-in-out;
+  z-index: 9999;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
 .header{
     position: fixed;
     width: 100%;
@@ -369,14 +401,13 @@ span{
     display: grid;
     grid-template-columns: repeat(auto-fix, minmax(300px, 1fr));
     align-items: center;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 .service-box{
     display: flex;
-    width: 95;
-    margin-left: px;
+    width: 95%;
     justify-content: center;
-    align-items: center;
+    justify-self: center;
     background-color: black;
     height: 600px;
     border-radius: 600px;
@@ -399,18 +430,41 @@ span{
     align-items: center;
     padding: 5rem;
 }
-.service-info i{
-    font-size: 8rem;
-    box-shadow: 0 0 25px  rgb(0, 174, 255),
-                0 0 50px  rgb(0, 174, 255),
-                0 0 100px  rgb(0, 174, 255);
+/* Flip Animation Keyframes */
+@keyframes ca__fx-flipX {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateX(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
 }
-.service-info i:hover{
-    color:  rgb(0, 174, 255);
-    box-shadow: 0 0 25px black,
-    0 0 50px  rgb(0, 174, 255)),
-                0 0 100px  rgb(0, 174, 255);
+
+/* Existing icon styles */
+.service-info i {
+  font-size: 8rem;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 25px rgb(0, 174, 255),
+              0 0 50px rgb(0, 174, 255),
+              0 0 100px rgb(0, 174, 255);
 }
+
+/* Flip animation on parent hover */
+.service-info:hover i {
+  animation: ca__fx-flipX 1.5s cubic-bezier(0.25, 0.85, 0.25, 1) forwards;
+  color: rgb(0, 174, 255);
+  box-shadow: 0 0 25px black,
+              0 0 50px rgb(0, 174, 255),
+              0 0 100px rgb(0, 174, 255);
+}
+
 .service-info h4{
     font-size: 4rem;
     margin: 2rem 0;
@@ -436,13 +490,15 @@ span{
 }
 .skills-bar{
     margin-top: 8rem;
-    padding: 25px 30px;
+    padding: 25px 40px;
     background: var(--bg-color);
     border: 4px solid var(--main-color);
     border-radius: 10px;
     display: flex;
+    justify-self: center;
     flex-direction: column;
     gap: 3rem;
+    width: 95%;
 }
 .skills-bar .bar{
     margin: 20px 0;
@@ -511,7 +567,7 @@ span{
     background-color: fuchsia;
 }
 .projects {
-    padding: 50px 0;
+    padding: 50px 30px;
     text-align: center;
     background-color: #111;
     color: whitesmoke;
